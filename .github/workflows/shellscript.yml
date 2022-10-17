@@ -7,6 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+      
     - name: test for 200
       run: ./.github/tests/valid200test.sh
       shell: bash
