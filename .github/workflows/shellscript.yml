@@ -1,0 +1,13 @@
+name: scriptingTest
+
+on: [push]
+jobs:
+  build:
+    name: Build Image
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: test for 200
+      run: ./.github/tests/valid200test.sh
+      shell: bash
+      
